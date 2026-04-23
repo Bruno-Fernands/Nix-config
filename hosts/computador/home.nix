@@ -1,15 +1,13 @@
-{ ... }:
+{...}: {
+  imports = [../../homeModules];
 
-{
-  imports = [ ../../homeModules ];
-
-  home.username      = "sadam";
+  home.username = "sadam";
   home.homeDirectory = "/home/sadam";
-  home.stateVersion  = "25.11";
+  home.stateVersion = "25.11";
 
   modules.home = {
-    bash.enable     = false;
-    theming.enable  = true;
+    bash.enable = false;
+    theming.enable = true;
     packages.enable = true;
     symlinks.enable = true;
     anki.enable = true;

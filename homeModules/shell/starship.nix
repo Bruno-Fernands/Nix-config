@@ -1,6 +1,8 @@
-{ config, lib, ... }:
-
 {
+  config,
+  lib,
+  ...
+}: {
   options.modules.home.starship = {
     enable = lib.mkEnableOption "starship prompt";
   };
@@ -14,44 +16,44 @@
         add_newline = false;
 
         username = {
-          format    = "[$user]($style)";
+          format = "[$user]($style)";
           style_user = "bold cyan";
           show_always = true;
         };
 
         hostname = {
-          format    = "[@$hostname]($style) ";
-          style     = "bold cyan";
-          ssh_only  = false;
+          format = "[@$hostname]($style) ";
+          style = "bold cyan";
+          ssh_only = false;
         };
 
         directory = {
-          format            = "[$path]($style) ";
-          style             = "bold blue";
+          format = "[$path]($style) ";
+          style = "bold blue";
           truncation_length = 3;
-          truncate_to_repo  = false;
+          truncate_to_repo = false;
         };
 
         git_branch = {
           format = "[$symbol$branch]($style) ";
           symbol = " ";
-          style  = "bold purple";
+          style = "bold purple";
         };
 
         git_status = {
-          format    = "([$all_status$ahead_behind]($style)) ";
-          style     = "bold red";
-          modified  = "!";
+          format = "([$all_status$ahead_behind]($style)) ";
+          style = "bold red";
+          modified = "!";
           untracked = "?";
-          staged    = "+";
-          deleted   = "✘";
-          ahead     = "⇡$count";
-          behind    = "⇣$count";
+          staged = "+";
+          deleted = "✘";
+          ahead = "⇡$count";
+          behind = "⇣$count";
         };
 
         character = {
           success_symbol = "[❯](bold green)";
-          error_symbol   = "[❯](bold red)";
+          error_symbol = "[❯](bold red)";
         };
       };
     };

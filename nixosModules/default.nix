@@ -1,11 +1,10 @@
-{ ... }:
-
-{
+{...}: {
   imports = [
     ./desktop/hyprland.nix
     ./desktop/display-manager.nix
     ./hardware/audio.nix
     ./hardware/bluetooth.nix
+    ./hardware/nvidia.nix
     ./system/locale.nix
     ./system/fonts.nix
     ./system/networking.nix

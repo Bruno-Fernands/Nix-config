@@ -1,6 +1,11 @@
-{ config, lib, pkgs, zen-browser, helium, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  zen-browser,
+  helium,
+  ...
+}: {
   options.modules.nixos.commonPackages = {
     enable = lib.mkEnableOption "common system packages";
   };

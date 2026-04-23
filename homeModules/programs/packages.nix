@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   options.modules.home.packages = {
     enable = lib.mkEnableOption "home packages";
   };
@@ -35,7 +38,6 @@
       spotify
       emacs
       vesktop
-      fuzzel
       fzf
       mpv
       mpc
@@ -49,6 +51,7 @@
       tldr
       man
       teams-for-linux
+      alejandra
     ];
   };
 }

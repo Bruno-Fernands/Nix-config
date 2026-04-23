@@ -1,6 +1,8 @@
-{ config, lib, ... }:
-
 {
+  config,
+  lib,
+  ...
+}: {
   options.modules.nixos.bluetooth = {
     enable = lib.mkEnableOption "Bluetooth support";
   };
@@ -9,7 +11,7 @@
     hardware.bluetooth.enable = true;
     hardware.bluetooth.settings = {
       General = {
-        Enable       = "Source,Sink,Media,Socket";
+        Enable = "Source,Sink,Media,Socket";
         Experimental = true;
       };
     };

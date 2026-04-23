@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   options.modules.nixos.fonts = {
     enable = lib.mkEnableOption "fonts";
   };
@@ -26,9 +29,9 @@
         lcdfilter = "default";
       };
       defaultFonts = {
-        sansSerif = [ "Noto Sans CJK SC" "Noto Sans" ];
-        serif     = [ "Noto Serif CJK SC" "Noto Serif" ];
-        monospace = [ "Noto Sans Mono" "Noto Sans Mono CJK SC" ];
+        sansSerif = ["Noto Sans CJK SC" "Noto Sans"];
+        serif = ["Noto Serif CJK SC" "Noto Serif"];
+        monospace = ["Noto Sans Mono" "Noto Sans Mono CJK SC"];
       };
     };
   };

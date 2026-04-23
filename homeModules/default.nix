@@ -1,6 +1,4 @@
-{ lib, ... }:
-
-{
+{lib, ...}: {
   imports = [
     ./shell/bash.nix
     ./shell/fish.nix
@@ -14,5 +12,4 @@
   #anki.enable = lib.mkDefault true;
   #fish.enable = lib.mkDefault true;
   #starship.enable = lib.mkDefault true;
-
 }

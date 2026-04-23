@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   options.modules.home.theming = {
     enable = lib.mkEnableOption "GTK/Qt theming and cursor";
   };
@@ -9,26 +12,26 @@
     home.pointerCursor = {
       gtk.enable = true;
       x11.enable = true;
-      name       = "Adwaita";
-      size       = 24;
-      package    = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+      size = 24;
+      package = pkgs.adwaita-icon-theme;
     };
 
     home.sessionVariables = {
       XCURSOR_THEME = "Adwaita";
-      XCURSOR_SIZE  = "24";
+      XCURSOR_SIZE = "24";
     };
 
     gtk = {
       enable = true;
       iconTheme = {
-        name    = "Papirus-Dark";
+        name = "Papirus-Dark";
         package = pkgs.papirus-icon-theme;
       };
     };
 
     qt = {
-      enable             = true;
+      enable = true;
       platformTheme.name = "gtk";
     };
   };
