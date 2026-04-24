@@ -25,7 +25,7 @@
           git diff -U0
           echo "NixOS Rebuilding..."
           if sudo nixos-rebuild switch --flake ~/nix-dots#sadam &>nixos-switch.log
-            set gen (nixos-rebuild list-generations | grep Current)
+            set gen (nixos-rebuild list-generations | grep True)
             git commit -am "$gen"
           else
             grep --color error nixos-switch.log
