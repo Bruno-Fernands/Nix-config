@@ -20,13 +20,14 @@
   outputs = {
     nixpkgs,
     home-manager,
-    zen-browser,
-    helium,
+    self,
+    #zen-browser,
+    #helium,
     ...
-  }: {
+  } @ inputs: {
     nixosConfigurations.sadam = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = {inherit zen-browser helium;};
+      specialArgs = {inherit inputs;};
       modules = [
         ./hosts/computador/configuration.nix
         home-manager.nixosModules.home-manager

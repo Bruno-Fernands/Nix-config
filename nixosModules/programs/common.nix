@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   zen-browser,
   helium,
   ...
@@ -15,8 +16,8 @@
 
     environment.systemPackages = with pkgs; [
       alacritty
-      helium.packages.x86_64-linux.default
-      zen-browser.packages.x86_64-linux.default
+      inputs.helium.packages.x86_64-linux.default
+      inputs.zen-browser.packages.x86_64-linux.default
     ];
   };
 }
