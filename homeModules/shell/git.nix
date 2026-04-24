@@ -10,9 +10,9 @@
   config = lib.mkIf config.modules.home.git.enable {
     programs.git = {
       enable = true;
-      userName = "Bruno-Fernands";
-      userEmail = "bruno.bf@ges.inatel.br";
-      extraConfig = {
+      settings.user.name = "Bruno-Fernands";
+      settings.user.email = "bruno.bf@ges.inatel.br";
+      settings = {
         core.sshCommand = "ssh -i ~/.ssh/id_ed25519";
         pull.rebase = false;
         init.defaultBranch = "main";
