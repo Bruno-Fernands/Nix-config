@@ -19,7 +19,6 @@
       pavucontrol
       neovim
       alacritty
-      pulseaudio
       ripgrep
       nil
       unzip
