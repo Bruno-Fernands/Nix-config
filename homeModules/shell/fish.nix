@@ -26,7 +26,9 @@
           echo "NixOS Rebuilding..."
           if sudo nixos-rebuild switch --flake ~/nix-dots#sadam &>nixos-switch.log
             set gen (nixos-rebuild list-generations | grep True)
-            git commit -am "$gen"
+            set gen_num (echo $gen_line | awk '{print $1}')
+            set gen_date (echo $gen_line | awk '{print $2, $3}')
+            git commit -am "Generation: $gen_num  Date: $gen_date"
           else
             grep --color error nixos-switch.log
           end
