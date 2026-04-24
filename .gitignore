@@ -1,0 +1,27 @@
+# Nix build results
+result
+result-*
+
+# Nix direnv
+.direnv
+
+# Logs from rebuild script
+nixos-switch.log
+
+# Secrets - never commit these
+*.age
+*.pem
+*.key
+secrets.nix
+secrets/
+
+# Editor temp files
+.vim/
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db

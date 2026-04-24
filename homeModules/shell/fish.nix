@@ -28,6 +28,7 @@
             set gen (nixos-rebuild list-generations | grep True)
             set gen_num (echo $gen_line | awk '{print $1}')
             set gen_date (echo $gen_line | awk '{print $2, $3}')
+            git add .
             git commit -am "Generation: $gen_num  Date: $gen_date"
           else
             grep --color error nixos-switch.log
