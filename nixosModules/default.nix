@@ -3,6 +3,7 @@
     ./desktop/hyprland.nix
     ./desktop/display-manager.nix
     ./desktop/waydroid.nix
+    ./desktop/steam.nix
     ./hardware/audio.nix
     ./hardware/bluetooth.nix
     ./hardware/nvidia.nix

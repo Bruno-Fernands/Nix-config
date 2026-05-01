@@ -25,6 +25,7 @@
     fonts.enable = true;
     nvidia.enable = true;
     waydroid.enable = true;
+    steam.enable = true;
   };
 
   # services.timesyncd.enable = false;
