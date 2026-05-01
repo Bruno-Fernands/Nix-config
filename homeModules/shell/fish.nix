@@ -17,6 +17,8 @@
         cd = "z";
         dots = "cd ~/nix-dots";
         dotpush = "cd ~/nix-dots && git add . && git commit -m (date '+%Y-%m-%d %H:%M') && git push";
+        cn = "cd ~/nix-dots";
+        gn = "cd ~/nix-dots && git add .";
       };
       functions.rebuild = {
         body = ''
