@@ -5,7 +5,7 @@
   ...
 }: {
   options.modules.home.emacs = {
-    enable = lib.mkEnableOption "Anki";
+    enable = lib.mkEnableOption "Emacs";
   };
 
   config = lib.mkIf config.modules.home.emacs.enable {
