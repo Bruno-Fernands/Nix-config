@@ -29,6 +29,8 @@
       nitch
       rofi
       pcmanfm
+      obs-studio
+      #stremio
       fastfetch
       tree
       bat

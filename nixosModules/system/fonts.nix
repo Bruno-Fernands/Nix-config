@@ -15,6 +15,8 @@
       noto-fonts-cjk-serif
       source-han-sans
       source-han-serif
+      terminus_font_ttf
+      terminus_font
     ];
 
     fonts.fontconfig = {

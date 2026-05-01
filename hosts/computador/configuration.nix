@@ -24,8 +24,10 @@
     commonPackages.enable = true;
     fonts.enable = true;
     nvidia.enable = true;
+    waydroid.enable = true;
   };
 
+  # services.timesyncd.enable = false;
   # Host-specific NTFS drives — too specific for a shared module
   boot.supportedFilesystems = ["ntfs"];
   fileSystems."/home/sadam/HD-1TB" = {
